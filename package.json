@@ -1,0 +1,40 @@
+{
+  "name": "@jy/core",
+  "version": "1.0.0",
+  "private": false,
+  "author": "Ben",
+  "main": "./src/index.js",
+  "description": "ben",
+  "keywords": [
+    "jy.kang",
+    "jooyoung"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/titaniper/jy-ui.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/titaniper/jy-ui/issues"
+  },
+  "homepage": "https://google.com/",
+  "scripts": {
+    "release": "yarn build && npm publish build --tag next",
+    "test": "cd ../../ && cross-env NODE_ENV=test mocha 'packages/material-ui/**/*.test.{js,ts,tsx}'"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.4"
+  },
+  "devDependencies": {},
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}
