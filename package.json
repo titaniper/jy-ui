@@ -1,6 +1,6 @@
 {
   "name": "jycore",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": false,
   "author": "ben-kang",
   "main": "./src/index.js",
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/titaniper/jy-ui.git"
+    "url": "git@github.com:titaniper/jy-ui.git"
   },
   "license": "MIT",
   "bugs": {
@@ -19,7 +19,7 @@
   },
   "homepage": "https://google.com/",
   "scripts": {
-    "release": "npm build && npm publish build --tag next",
+    "release": "npm publish --tag next",
     "test": "cd ../../ && cross-env NODE_ENV=test mocha 'packages/material-ui/**/*.test.{js,ts,tsx}'"
   },
   "peerDependencies": {
