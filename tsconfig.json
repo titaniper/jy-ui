@@ -5,11 +5,12 @@
     "lib": ["ES2018", "DOM"],
     "jsx": "react",
     "declaration": true /* Generates corresponding '.d.ts' file. */,
-    "outDir": "lib",
+    "outDir": "build",
+    "rootDir": "./src",
     "removeComments": true,
     "strict": true /* Enable all strict type-checking options. */,
     "esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "**/*.spec.tsx", "**/*.stories.tsx"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts"]
 }
