@@ -2,7 +2,7 @@
   "name": "@jy/core",
   "version": "1.0.0",
   "private": false,
-  "author": "Ben",
+  "author": "ben-kang",
   "main": "./src/index.js",
   "description": "ben",
   "keywords": [
@@ -19,8 +19,8 @@
   },
   "homepage": "https://google.com/",
   "scripts": {
-    "release": "yarn build && npm publish build --tag next",
-    "test": "cd ../../ && cross-env NODE_ENV=test mocha 'packages/material-ui/**/*.test.{js,ts,tsx}'"
+    "release": "npm build && npm publish build --tag next",
+    "test": "cd ../../ && cross-env NODE_ENV=test mocha 'packages/material-ui/**/*.test.{js,ts,tsx}'",
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0",
