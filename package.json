@@ -1,45 +1,90 @@
 {
   "name": "jycore",
-  "version": "1.1.2",
-  "private": false,
-  "author": "ben-kang",
-  "main": "./src/index.js",
+  "version": "2.0.0",
   "description": "ben",
   "keywords": [
     "jy.kang",
     "jooyoung"
   ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint ./src/** --ext .ts,.tsx",
+    "storybook": "start-storybook",
+    "build-storybook": "build-storybook -c .storybook -o .out",
+    "zeplin-connect": "zeplin connect",
+    "prebuild": "rm -rf lib",
+    "build": "tsc",
+    "prepublish": "npm run build"
+  },
+  "private": false,
   "repository": {
     "type": "git",
     "url": "git@github.com:titaniper/jy-ui.git"
   },
+  "author": "ben-kang",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/titaniper/jy-ui/issues"
   },
   "homepage": "https://google.com/",
-  "scripts": {
-    "release": "npm publish --tag next",
-    "test": "cd ../../ && cross-env NODE_ENV=test mocha 'packages/material-ui/**/*.test.{js,ts,tsx}'"
-  },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0"
+    "@material-ui/core": "^4.10.1",
+    "@material-ui/icons": "^4.9.1",
+    "react": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "rxjs": "^6.6.3"
+  },
+  "devDependencies": {
+    "@ecubelabs/prettier-config": "0.0.8",
+    "@material-ui/core": "^4.10.1",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "4.0.0-alpha.56",
+    "@storybook/addon-info": "^5.3.19",
+    "@storybook/preset-typescript": "^3.0.0",
+    "@storybook/react": "^5.3.19",
+    "@testing-library/jest-dom": "^5.9.0",
+    "@testing-library/react": "^10.2.0",
+    "@types/jest": "^25.2.3",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.6",
+    "@types/react-test-renderer": "^16.9.2",
+    "@types/storybook__addon-info": "^5.2.1",
+    "@typescript-eslint/eslint-plugin": "^3.1.0",
+    "@typescript-eslint/parser": "^3.1.0",
+    "@zeplin/cli": "^1.0.3",
+    "@zeplin/cli-connect-react-plugin": "^0.2.4",
+    "@zeplin/cli-connect-storybook-plugin": "^0.2.0",
+    "eslint": "^7.1.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-ecubelabs": "^14.2.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-flowtype": "^5.1.3",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-test-renderer": "^16.13.1",
+    "storybook-addon-jsx": "^7.2.3",
+    "ts-jest": "^26.1.0",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5"
   },
   "dependencies": {
-    "@babel/runtime": "^7.4.4",
-    "@material-ui/styled-engine": "^5.0.0-alpha.14",
-    "@material-ui/styles": "^5.0.0-alpha.15",
-    "@material-ui/system": "^5.0.0-alpha.15",
-    "@material-ui/types": "^5.1.0",
-    "@material-ui/utils": "^5.0.0-alpha.15"
+    "jycore": "^1.1.2"
   },
-  "devDependencies": {},
   "sideEffects": false,
   "publishConfig": {
     "access": "public"
-  },
-  "engines": {
-    "node": ">=10.0.0"
   }
 }
