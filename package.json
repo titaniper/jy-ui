@@ -23,13 +23,30 @@
     "test": "cd ../../ && cross-env NODE_ENV=test mocha 'packages/material-ui/**/*.test.{js,ts,tsx}'"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0"
+    "react": "^16.8.6"
   },
   "dependencies": {
-    "@babel/runtime": "^7.4.4"
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-router-dom": "^5.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.0.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "eslint-plugin-standard": "^4.0.0"
+  },
   "sideEffects": false,
   "publishConfig": {
     "access": "public"
