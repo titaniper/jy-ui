@@ -1,6 +1,6 @@
 {
   "name": "jycore",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "ben",
   "keywords": [
     "jy.kang",
@@ -27,6 +27,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/titaniper/jy-ui/issues"
+  },
+  "exports": {
+    "./": "./build/"
   },
   "homepage": "https://google.com/",
   "peerDependencies": {
