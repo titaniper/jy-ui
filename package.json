@@ -6,6 +6,13 @@
     "jy.kang",
     "jooyoung"
   ],
+  "type": "module",
+  "exports": {
+    "./": "./build/"
+  },
+  "files": [
+    "build"
+  ],
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
   "scripts": {
