@@ -9,21 +9,15 @@ const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = (env, argv) => ({
-  context: path.resolve(__dirname),
   entry: ["@babel/polyfill", "./src/styles/main.scss", "./src/index.tsx"],
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
   resolve: {
-    modules: [__dirname, 'node_modules'],
-    alias: {
-      'jycore/hooks': path.resolve(__dirname, './src/hooks'),
-      'jycore/styles': path.resolve(__dirname, './src/styles'),
-    },
     extensions: [".ts", ".tsx", ".js"],
   },
   output: {
-    path: path.join(__dirname, 'build'),
-    filename: 'bundle.js',
-    publicPath: '/',
+    filename: "[name].[hash].js",
+    path: path.join(__dirname, "dist"),
+    publicPath: "/",
   },
   module: {
     rules: [
