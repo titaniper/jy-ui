@@ -1,6 +1,6 @@
 {
   "name": "jycore",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "description": "ben",
   "keywords": [
     "jy.kang",
@@ -15,8 +15,9 @@
     "build-storybook": "build-storybook -c .storybook -o .out",
     "zeplin-connect": "zeplin connect",
     "prebuild": "rm -rf build",
-    "build": "tsc",
-    "prepublish": "npm run build && cp ./package.json build"
+    "build": "npm run prebuild && tsc",
+    "prepublish": "[[ \"$PWD\" =~ YOUR_DIR_HERE/build ]] && npm run build && cp ./package.json build",
+    "pub": "pushd ./ && npm run prepublish && cd build && npm publish && popd"
   },
   "private": false,
   "repository": {
