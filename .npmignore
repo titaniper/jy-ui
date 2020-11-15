@@ -1,8 +1,12 @@
+.eslintrc.js
+LICENSE
+tsconfig.json
+webpack.config.js
+src
 .out
 .storybook
 .zeplin
 @material-ui
-src
 .dockerignore
 .gitignore
 .npmignore
