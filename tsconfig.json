@@ -6,7 +6,7 @@
     "lib": ["ES2018", "DOM"],
     "jsx": "react",
     "declaration": true /* Generates corresponding '.d.ts' file. */,
-    "outDir": "build",
+    "outDir": "./",
     "rootDir": "./src",
     "removeComments": true,
     "strict": true /* Enable all strict type-checking options. */,

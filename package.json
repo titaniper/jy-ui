@@ -1,6 +1,6 @@
 {
   "name": "jycore",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "ben",
   "keywords": [
     "jy.kang",
@@ -14,7 +14,7 @@
     "storybook": "start-storybook",
     "build-storybook": "build-storybook -c .storybook -o .out",
     "zeplin-connect": "zeplin connect",
-    "prebuild": "rm -rf lib",
+    "prebuild": "rm -rf build",
     "build": "tsc",
     "prepublish": "npm run build"
   },
@@ -27,9 +27,6 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/titaniper/jy-ui/issues"
-  },
-  "exports": {
-    "./": "./build/"
   },
   "homepage": "https://google.com/",
   "peerDependencies": {
@@ -83,9 +80,7 @@
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.5"
   },
-  "dependencies": {
-    "jycore": "^1.1.2"
-  },
+  "dependencies": {},
   "sideEffects": false,
   "publishConfig": {
     "access": "public"
